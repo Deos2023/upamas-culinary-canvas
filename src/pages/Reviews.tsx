@@ -81,7 +81,10 @@ const Reviews = () => {
                 Customer <span className="text-primary">Reviews</span>
               </h1>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-                See what our happy clients have to say about our services
+                See what our happy clients have to say about our services 6+
+                years of creating memorable experiences, one happy client at a
+                time Join the thousands who've experienced the Upama's Kitchen
+                difference
               </p>
             </motion.div>
           </div>

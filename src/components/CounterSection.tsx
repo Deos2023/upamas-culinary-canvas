@@ -70,7 +70,7 @@ const CounterSection = () => {
     },
     {
       icon: Utensils,
-      value: 1000000,
+      value: 10000,
       suffix: '+',
       label: 'Rotis Served',
       color: 'text-secondary',
@@ -78,7 +78,7 @@ const CounterSection = () => {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-b from-accent to-accent/80">
+    <section className="py-20 bg-gradient-to-b from-accent to-accent/20">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -90,7 +90,7 @@ const CounterSection = () => {
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
             Our <span className="text-primary">Achievements</span>
           </h2>
-          <p className="text-muted-foreground text-lg">
+          <p className="text-gray-800 text-lg">
             Numbers that speak for our commitment to excellence
           </p>
         </motion.div>

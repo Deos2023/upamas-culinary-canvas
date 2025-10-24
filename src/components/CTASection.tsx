@@ -38,7 +38,7 @@ const CTASection = () => {
             <motion.a
               href="mailto:upamabanerjee98@gmail.com"
               whileHover={{ scale: 1.05 }}
-              className="flex items-center gap-3 p-6 bg-card rounded-xl shadow-lg hover:shadow-xl transition-all"
+              className="flex items-center gap-3 p-2 bg-card rounded-xl shadow-lg hover:shadow-xl transition-all"
             >
               <div className="bg-primary/10 p-3 rounded-full">
                 <Mail className="text-primary" size={24} />

@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
+import { url } from 'inspector/promises';
 
 const FeaturedMenu = () => {
   const menuItems = [
@@ -16,7 +17,15 @@ const FeaturedMenu = () => {
   ];
 
   return (
-    <section className="py-20 bg-muted/30">
+    <section className="py-20 bg-muted/30 ">
+      <div className="absolute inset-0 opacity-50">
+        <div
+          className="absolute inset-0 bg-no-repeat bg-center bg-cover bg-fixed"
+          style={{
+            backgroundImage: url("@/assets/menu.jpg"),
+          }}
+        />
+      </div>
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 30 }}

@@ -24,20 +24,20 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
         >
-          <motion.p
+          {/* <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3, duration: 0.8 }}
-            className="text-primary text-lg md:text-xl mb-4 font-medium tracking-wider"
+            className="text-primary text-lg md:text-xl  font-medium tracking-wider"
           >
             ✦ SINCE 2019 ✦
-          </motion.p>
+          </motion.p> */}
 
           <motion.h1
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.5, duration: 0.8 }}
-            className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6"
+            className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6"
           >
             Upama's <span className="text-primary gold-shimmer">Kitchen</span>
             <br />& Caterer

@@ -70,7 +70,7 @@ const Footer = () => {
 
         <div className="border-t border-border mt-8 pt-8 text-center">
           <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} Upama's Kitchen & Caterer. All rights reserved.
+            © {new Date().getFullYear()} Upama's Kitchen & Caterer. All rights reserved. Developed & Maintained by Digital Exposure Online Services<span className="text-primary font-medium">Your Name</span>
             <span className="mx-2">|</span>
             Owner: <span className="text-primary font-medium">Upama Banerjee</span>
           </p>

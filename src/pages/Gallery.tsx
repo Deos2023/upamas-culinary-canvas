@@ -24,6 +24,9 @@ import video6 from "@/assets/videos/machine4.mp4"
 import video7 from "@/assets/videos/roti.mp4"
 import video8 from "@/assets/videos/WhatsApp Video 2025-10-23 at 16.07.16.mp4"
 import video9 from "@/assets/videos/WhatsApp Video 2025-10-23 at 16.07.51.mp4"
+import video10 from "@/assets/videos/WhatsApp Video 2025-10-23 at 16.07.31.mp4"
+import video11 from "@/assets/videos/WhatsApp Video 2025-10-23 at 16.07.32.mp4"
+import video12 from "@/assets/videos/WhatsApp Video 2025-10-23 at 16.07.34.mp4"
 
 const VideoPlayer = ({ src, title, category }) => {
   const videoRef = useRef(null);
@@ -153,6 +156,9 @@ const Gallery = () => {
     { type: 'video', src: video7, title: 'Fresh Roti Making', category: 'Food' },
     { type: 'video', src: video8, title: 'Event Catering', category: 'Events' },
     { type: 'video', src: video9, title: 'Food Service', category: 'Events' },
+    { type: 'video', src: video10, title: 'WhatsApp Video', category: 'Events' },
+    { type: 'video', src: video11, title: 'WhatsApp Video', category: 'Events' },
+    { type: 'video', src: video12, title: 'WhatsApp Video', category: 'Events' },
   ];
 
   return (

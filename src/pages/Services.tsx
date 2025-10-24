@@ -243,7 +243,7 @@ const Services = () => {
       {/* CTA */}
       <section className="py-20 bg-accent">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold mb-6">
+          <h2 className="text-4xl font-bold mb-6 text-white">
             Ready to Book <span className="text-primary">Our Services?</span>
           </h2>
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">

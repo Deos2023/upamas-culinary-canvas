@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Award, Users, Heart } from 'lucide-react';
-import bengaliBreakfast from '@/assets/bengali-breakfast.jpg';
+import bengaliBreakfast from '@/assets/food2.jpeg';
 
 const AboutSection = () => {
   const features = [

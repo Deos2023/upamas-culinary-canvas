@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { MapPin, Mail, Phone, Clock } from 'lucide-react';
+import { MapPin, Mail, Phone, Clock, Loader2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -15,15 +15,66 @@ const Contact = () => {
     phone: '',
     message: '',
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // In a real application, you would send this data to a backend
-    toast({
-      title: 'Message Sent!',
-      description: "We'll get back to you within 24 hours.",
-    });
-    setFormData({ name: '', email: '', phone: '', message: '' });
+    
+    // Basic validation
+    if (!formData.name.trim() || !formData.phone.trim()) {
+      toast({
+        title: 'Missing Information',
+        description: "Please fill in at least your name and phone number.",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    setIsSubmitting(true);
+
+    try {
+      // Format the message for WhatsApp
+      const whatsappMessage = `
+🎯 *New Website Inquiry - Upama's Kitchen*
+
+👤 *Name:* ${formData.name}
+📧 *Email:* ${formData.email || 'Not provided'}
+📞 *Phone:* ${formData.phone}
+💬 *Message:* ${formData.message || 'No additional message'}
+
+*Submitted via Website Contact Form*
+      `.trim();
+
+      // Encode the message for URL
+      const encodedMessage = encodeURIComponent(whatsappMessage);
+      
+      // Create WhatsApp URL
+      const whatsappUrl = `https://wa.me/918240594541?text=${encodedMessage}`;
+      
+      // Small delay for better UX
+      await new Promise(resolve => setTimeout(resolve, 1000));
+      
+      // Open WhatsApp in new tab
+      window.open(whatsappUrl, '_blank');
+      
+      // Show success toast
+      toast({
+        title: 'Message Ready!',
+        description: "You're being redirected to WhatsApp to send your inquiry.",
+      });
+      
+      // Reset form
+      setFormData({ name: '', email: '', phone: '', message: '' });
+      
+    } catch (error) {
+      toast({
+        title: 'Error',
+        description: "Failed to prepare WhatsApp message. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -31,19 +82,19 @@ const Contact = () => {
   };
 
   return (
-    <main className="pt-20">
+    <main className="overflow-x-hidden">
       {/* Hero */}
-      <section className="py-20 bg-gradient-to-br from-primary/10 to-secondary/10">
+      <section className="py-20 bg-gradient-to-br from-black/60 to-slate-700">
         <div className="container mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 ">
               Get in <span className="text-primary">Touch</span>
             </h1>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
               We'd love to hear from you. Contact us for bookings or any queries
             </p>
           </motion.div>
@@ -163,13 +214,12 @@ const Contact = () => {
 
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium mb-2">
-                    Email *
+                    Email
                   </label>
                   <Input
                     id="email"
                     name="email"
                     type="email"
-                    required
                     value={formData.email}
                     onChange={handleChange}
                     placeholder="your.email@example.com"
@@ -193,12 +243,11 @@ const Contact = () => {
 
                 <div>
                   <label htmlFor="message" className="block text-sm font-medium mb-2">
-                    Message *
+                    Message
                   </label>
                   <Textarea
                     id="message"
                     name="message"
-                    required
                     value={formData.message}
                     onChange={handleChange}
                     placeholder="Tell us about your event requirements..."
@@ -206,8 +255,20 @@ const Contact = () => {
                   />
                 </div>
 
-                <Button type="submit" size="lg" className="w-full bg-primary hover:bg-primary/90">
-                  Send Message
+                <Button 
+                  type="submit" 
+                  size="lg" 
+                  className="w-full bg-primary hover:bg-primary/90"
+                  disabled={isSubmitting}
+                >
+                  {isSubmitting ? (
+                    <>
+                      <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                      Preparing WhatsApp...
+                    </>
+                  ) : (
+                    'Send via WhatsApp'
+                  )}
                 </Button>
               </form>
             </motion.div>

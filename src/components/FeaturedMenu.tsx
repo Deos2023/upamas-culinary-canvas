@@ -1,44 +1,84 @@
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent } from '@/components/ui/card';
-import { url } from 'inspector/promises';
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import menuBackground from "@/assets/food.jpeg";
 
 const FeaturedMenu = () => {
   const menuItems = [
-    { name: 'Roti', price: '₹2.50/pc', description: 'Fresh handmade rotis', category: 'Retail' },
-    { name: 'Luchi', price: '₹2/pc', description: '50 pc packet', category: 'Wholesale' },
-    { name: 'Hing Kachori', price: '₹4/pc', description: '24 pc packet', category: 'Popular' },
-    { name: 'Peas Kachori', price: '₹4/pc', description: '25 pc packet', category: 'Veg' },
-    { name: 'Dal Poori', price: '₹4/pc', description: '25 pc packet', category: 'Veg' },
-    { name: 'Radha Ballavi', price: '₹4/pc', description: '25 pc packet', category: 'Popular' },
-    { name: 'Plain Paratha', price: '₹5/pc', description: '25 pc packet', category: 'Retail' },
-    { name: 'Egg Roll Base', price: '₹8/pc', description: '25 pc packet', category: 'Non-Veg' },
+    {
+      name: "Roti",
+      price: "₹2.50/pc",
+      description: "Fresh handmade rotis",
+      category: "Retail",
+    },
+    {
+      name: "Luchi",
+      price: "₹2/pc",
+      description: "50 pc packet",
+      category: "Wholesale",
+    },
+    {
+      name: "Hing Kachori",
+      price: "₹4/pc",
+      description: "24 pc packet",
+      category: "Popular",
+    },
+    {
+      name: "Peas Kachori",
+      price: "₹4/pc",
+      description: "25 pc packet",
+      category: "Veg",
+    },
+    {
+      name: "Dal Poori",
+      price: "₹4/pc",
+      description: "25 pc packet",
+      category: "Veg",
+    },
+    {
+      name: "Radha Ballavi",
+      price: "₹4/pc",
+      description: "25 pc packet",
+      category: "Popular",
+    },
+    {
+      name: "Plain Paratha",
+      price: "₹5/pc",
+      description: "25 pc packet",
+      category: "Retail",
+    },
+    {
+      name: "Egg Roll Base",
+      price: "₹8/pc",
+      description: "25 pc packet",
+      category: "Non-Veg",
+    },
   ];
 
   return (
-    <section className="py-20 bg-muted/30 ">
-      <div className="absolute inset-0 opacity-50">
-        <div
-          className="absolute inset-0 bg-no-repeat bg-center bg-cover bg-fixed"
-          style={{
-            backgroundImage: url("@/assets/menu.jpg"),
-          }}
-        />
-      </div>
-      <div className="container mx-auto px-4">
+    <section
+      className=" bg-muted/30 bg-fixed bg-cover bg-center"
+      style={{
+        backgroundImage: `url(${menuBackground})`,
+      }}
+    >
+      <div className="container mx-auto px-4 bg-black/60">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <p className="text-primary text-sm font-semibold tracking-wider mb-4">✦ OUR MENU ✦</p>
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+          <p className="text-primary text-sm font-semibold tracking-wider mb-4">
+            ✦ OUR MENU ✦
+          </p>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
             Authentic <span className="text-primary">Bengali Delights</span>
           </h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Freshly prepared daily with traditional recipes and premium ingredients
+          <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+            Freshly prepared daily with traditional recipes and premium
+            ingredients
           </p>
         </motion.div>
 
@@ -61,8 +101,12 @@ const FeaturedMenu = () => {
                       {item.category}
                     </span>
                   </div>
-                  <p className="text-sm text-muted-foreground mb-3">{item.description}</p>
-                  <p className="text-2xl font-bold text-primary">{item.price}</p>
+                  <p className="text-sm text-muted-foreground mb-3">
+                    {item.description}
+                  </p>
+                  <p className="text-2xl font-bold text-primary">
+                    {item.price}
+                  </p>
                 </CardContent>
               </Card>
             </motion.div>

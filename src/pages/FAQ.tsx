@@ -5,8 +5,12 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from '@/components/ui/accordion';
+import { useEffect } from 'react';
 
 const FAQ = () => {
+  useEffect(()=>{
+      window.scrollTo(0,0);
+    },[])
   const faqs = [
     {
       question: 'What types of events do you cater?',

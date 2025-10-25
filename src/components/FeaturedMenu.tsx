@@ -119,7 +119,7 @@ const FeaturedMenu = () => {
           viewport={{ once: true }}
           className="text-center"
         >
-          <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
+          <Button asChild size="lg" className="bg-primary hover:bg-primary/90 mb-4">
             <Link to="/menu">View Full Menu</Link>
           </Button>
         </motion.div>

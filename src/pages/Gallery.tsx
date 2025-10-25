@@ -55,6 +55,8 @@ const VideoPlayer = ({ src, title, category }) => {
   };
 
   useEffect(() => {
+    // Scroll to top when component mounts
+    window.scrollTo(0, 0);
     const video = videoRef.current;
     
     const handlePlay = () => setIsPlaying(true);

@@ -156,7 +156,7 @@ const HerStory = () => {
                   <div className="flex justify-center mb-2">
                     <Award className="w-8 h-8 text-primary" />
                   </div>
-                  <div className="text-2xl font-bold text-gray-900">2</div>
+                  <div className="text-2xl font-bold text-gray-900">3</div>
                   <div className="text-sm text-gray-600">
                     Prestigious Awards
                   </div>

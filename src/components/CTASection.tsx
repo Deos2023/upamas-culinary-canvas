@@ -32,6 +32,7 @@ const CTASection = () => {
               <div className="text-left">
                 <p className="text-sm text-muted-foreground">Call Us</p>
                 <p className="font-semibold">8240594541</p>
+                <p className="font-semibold">9007294740</p>
               </div>
             </motion.a>
 

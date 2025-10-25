@@ -2,7 +2,13 @@ import { motion } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
 import { Star } from "lucide-react";
 import reviewbg from "@/assets/grp4.jpeg";
+import { useEffect } from "react";
 const Reviews = () => {
+
+  useEffect(()=>{
+      window.scrollTo(0,0);
+    },[])
+    
   const reviews = [
     {
       name: "Priya Sharma",

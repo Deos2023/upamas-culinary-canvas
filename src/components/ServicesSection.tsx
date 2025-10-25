@@ -1,65 +1,87 @@
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { Button } from '@/components/ui/button';
-import { Heart, Briefcase, Cake, Sparkles, Settings, Users, Star, Award, Clock, CheckCircle, Phone } from 'lucide-react';
-import weddingCatering from '@/assets/wedding-catering.jpg';
-import food from '@/assets/food.jpeg';
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
+import {
+  Heart,
+  Briefcase,
+  Cake,
+  Sparkles,
+  Settings,
+  Users,
+  Star,
+  Award,
+  Clock,
+  CheckCircle,
+  Phone,
+} from "lucide-react";
+import weddingCatering from "@/assets/wedding-catering.jpg";
+import food from "@/assets/food.jpeg";
 
 const ServicesSection = () => {
   const services = [
     {
-      icon: Heart,
-      title: 'Wedding Catering',
-      description: 'Make your special day memorable with our premium wedding catering services',
-    },
-    {
-      icon: Briefcase,
-      title: 'Corporate Events',
-      description: 'Professional catering for meetings, seminars, and corporate gatherings',
-    },
-    {
-      icon: Cake,
-      title: 'Birthday Parties',
-      description: 'Delightful food arrangements for celebrations of all sizes',
-    },
-    {
-      icon: Sparkles,
-      title: 'Religious Functions',
-      description: 'Traditional sattvik food options for pujas and religious ceremonies',
-    },
-    {
       icon: Settings,
-      title: 'Roti Machine Sales',
-      description: 'Authorized dealer for automatic roti making machines',
+      title: "Roti Machine Sales",
+      description: "Authorized dealer for automatic roti making machines",
     },
     {
       icon: Users,
-      title: 'Machine Service',
-      description: 'Comprehensive maintenance and support for roti machines',
+      title: "Machine Service",
+      description: "Comprehensive maintenance and support for roti machines",
+    },
+    {
+      icon: Heart,
+      title: "Wedding Catering",
+      description:
+        "Make your special day memorable with our premium wedding catering services",
+    },
+    {
+      icon: Briefcase,
+      title: "Corporate Events",
+      description:
+        "Professional catering for meetings, seminars, and corporate gatherings",
+    },
+    {
+      icon: Cake,
+      title: "Birthday Parties",
+      description: "Delightful food arrangements for celebrations of all sizes",
+    },
+    {
+      icon: Sparkles,
+      title: "Religious Functions",
+      description:
+        "Traditional sattvik food options for pujas and religious ceremonies",
     },
   ];
 
   const stats = [
-    { number: '5000+', label: 'Happy Clients' },
-    { number: '1000+', label: 'Events Catered' },
-    { number: '6+', label: 'Years Experience' },
-    { number: '10L+', label: 'Rotis Served' },
+    { number: "5000+", label: "Happy Clients" },
+    { number: "1000+", label: "Events Catered" },
+    { number: "6+", label: "Years Experience" },
+    { number: "10L+", label: "Rotis Served" },
   ];
 
   const features = [
-    '100% Hygienic Kitchen',
-    'Traditional Recipes',
-    'Fresh Ingredients',
-    'On-time Delivery',
-    'Customizable Menus',
-    'Professional Staff'
+    "100% Hygienic Kitchen",
+    "Traditional Recipes",
+    "Fresh Ingredients",
+    "On-time Delivery",
+    "Customizable Menus",
+    "Professional Staff",
   ];
 
   return (
     <section className="py-20 bg-background relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
-        <div className="absolute inset-0" style={{ backgroundImage: 'radial-gradient(circle, hsl(var(--primary)) 1px, transparent 1px)', backgroundSize: '50px 50px' }} />
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage:
+              "radial-gradient(circle, hsl(var(--primary)) 1px, transparent 1px)",
+            backgroundSize: "50px 50px",
+          }}
+        />
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
@@ -69,7 +91,9 @@ const ServicesSection = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <p className="text-primary text-sm font-semibold tracking-wider mb-4">✦ WHAT WE OFFER ✦</p>
+          <p className="text-primary text-sm font-semibold tracking-wider mb-4">
+            ✦ WHAT WE OFFER ✦
+          </p>
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
             Our <span className="text-primary">Services</span>
           </h2>
@@ -92,7 +116,7 @@ const ServicesSection = () => {
                 <Award className="text-primary" size={28} />
                 Why Choose Us?
               </h3>
-              
+
               {/* Features List */}
               <div className="space-y-4 mb-8">
                 {features.map((feature, index) => (
@@ -121,8 +145,12 @@ const ServicesSection = () => {
                     transition={{ delay: index * 0.1 + 0.6 }}
                     className="text-center p-4 bg-primary/5 rounded-lg border border-primary/10"
                   >
-                    <p className="text-2xl font-bold text-primary mb-1">{stat.number}</p>
-                    <p className="text-xs text-muted-foreground">{stat.label}</p>
+                    <p className="text-2xl font-bold text-primary mb-1">
+                      {stat.number}
+                    </p>
+                    <p className="text-xs text-muted-foreground">
+                      {stat.label}
+                    </p>
                   </motion.div>
                 ))}
               </div>
@@ -142,7 +170,7 @@ const ServicesSection = () => {
               transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
               className="absolute w-96 h-96 border-2 border-primary/20 rounded-full"
             />
-            
+
             {/* Middle Rotating Ring */}
             <motion.div
               animate={{ rotate: -360 }}
@@ -163,7 +191,7 @@ const ServicesSection = () => {
                   style={{
                     top: `${50 + 45 * Math.sin((angle * Math.PI) / 180)}%`,
                     left: `${50 + 45 * Math.cos((angle * Math.PI) / 180)}%`,
-                    transform: 'translate(-50%, -50%)',
+                    transform: "translate(-50%, -50%)",
                   }}
                 >
                   <Star className="text-primary" size={20} />
@@ -173,13 +201,13 @@ const ServicesSection = () => {
 
             {/* Main Rotating Image */}
             <motion.div
-              animate={{ 
+              animate={{
                 rotate: 360,
-                scale: [1, 1.05, 1]
+                scale: [1, 1.05, 1],
               }}
-              transition={{ 
+              transition={{
                 rotate: { duration: 30, repeat: Infinity, ease: "linear" },
-                scale: { duration: 4, repeat: Infinity, ease: "easeInOut" }
+                scale: { duration: 4, repeat: Infinity, ease: "easeInOut" },
               }}
               className="relative w-64 h-64 rounded-full border-4 border-primary/20 shadow-2xl overflow-hidden"
             >
@@ -188,7 +216,7 @@ const ServicesSection = () => {
                 alt="Traditional Bengali Thali"
                 className="w-full h-full object-cover"
               />
-              
+
               {/* Glow Effect */}
               <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent rounded-full" />
             </motion.div>
@@ -218,7 +246,9 @@ const ServicesSection = () => {
                   transition={{ delay: 0.2 }}
                   className="p-4 bg-secondary/5 rounded-lg border border-secondary/10"
                 >
-                  <h4 className="font-semibold text-secondary mb-2">Free Consultation</h4>
+                  <h4 className="font-semibold text-secondary mb-2">
+                    Free Consultation
+                  </h4>
                   <p className="text-sm text-muted-foreground">
                     Get personalized menu suggestions and quotes
                   </p>
@@ -230,7 +260,9 @@ const ServicesSection = () => {
                   transition={{ delay: 0.4 }}
                   className="p-4 bg-primary/5 rounded-lg border border-primary/10"
                 >
-                  <h4 className="font-semibold text-primary mb-2">24/7 Support</h4>
+                  <h4 className="font-semibold text-primary mb-2">
+                    24/7 Support
+                  </h4>
                   <p className="text-sm text-muted-foreground">
                     Available for urgent bookings and inquiries
                   </p>
@@ -242,7 +274,9 @@ const ServicesSection = () => {
                   transition={{ delay: 0.6 }}
                   className="p-4 bg-green-500/5 rounded-lg border border-green-500/10"
                 >
-                  <h4 className="font-semibold text-green-600 mb-2">Flexible Packages</h4>
+                  <h4 className="font-semibold text-green-600 mb-2">
+                    Flexible Packages
+                  </h4>
                   <p className="text-sm text-muted-foreground">
                     Customizable options for every budget
                   </p>
@@ -256,7 +290,10 @@ const ServicesSection = () => {
                 transition={{ delay: 0.8 }}
                 className="mt-8 text-center"
               >
-                <Button asChild className="w-full bg-primary hover:bg-primary/90">
+                <Button
+                  asChild
+                  className="w-full bg-primary hover:bg-primary/90"
+                >
                   <Link to="/contact">
                     <Phone size={16} className="mr-2" />
                     Call Now
@@ -327,14 +364,19 @@ const ServicesSection = () => {
                 transition={{ delay: 0.4 }}
                 className="text-lg mb-6 max-w-xl"
               >
-                Let us handle the catering while you enjoy your special moment. Get a free quote today!
+                Let us handle the catering while you enjoy your special moment.
+                Get a free quote today!
               </motion.p>
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.6 }}
               >
-                <Button asChild size="lg" className="bg-primary hover:bg-primary/90 hover:scale-105 transition-transform">
+                <Button
+                  asChild
+                  size="lg"
+                  className="bg-primary hover:bg-primary/90 hover:scale-105 transition-transform"
+                >
                   <Link to="/contact">Get Free Quote</Link>
                 </Button>
               </motion.div>

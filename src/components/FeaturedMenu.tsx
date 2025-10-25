@@ -10,7 +10,7 @@ const FeaturedMenu = () => {
       name: "Roti",
       price: "₹2.50/pc",
       description: "Fresh handmade rotis",
-      category: "Retail",
+      category: "Wholesale",
     },
     {
       name: "Luchi",
@@ -22,37 +22,37 @@ const FeaturedMenu = () => {
       name: "Hing Kachori",
       price: "₹4/pc",
       description: "24 pc packet",
-      category: "Popular",
+      category: "Wholesale",
     },
     {
       name: "Peas Kachori",
       price: "₹4/pc",
       description: "25 pc packet",
-      category: "Veg",
+      category: "Wholesale",
     },
     {
       name: "Dal Poori",
       price: "₹4/pc",
       description: "25 pc packet",
-      category: "Veg",
+      category: "Wholesale",
     },
     {
       name: "Radha Ballavi",
       price: "₹4/pc",
       description: "25 pc packet",
-      category: "Popular",
+      category: "Wholesale",
     },
     {
       name: "Plain Paratha",
       price: "₹5/pc",
       description: "25 pc packet",
-      category: "Retail",
+      category: "Wholesale",
     },
     {
       name: "Egg Roll Base",
       price: "₹8/pc",
       description: "25 pc packet",
-      category: "Non-Veg",
+      category: "Wholesale",
     },
   ];
 
@@ -80,7 +80,7 @@ const FeaturedMenu = () => {
             Freshly prepared daily with traditional recipes and premium
             ingredients
           </p>
-        </motion.div>
+        </motion.div>Non
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
           {menuItems.map((item, index) => (

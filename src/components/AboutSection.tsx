@@ -63,7 +63,7 @@ const AboutSection = () => {
               Serving Taste with <span className="text-primary">Tradition</span>
             </h2>
             <p className="text-muted-foreground text-lg mb-6">
-              Founded by <span className="font-semibold text-foreground">Upama Banerjee</span> on
+              Founded by <span className="font-semibold text-foreground">Upama Mukherjee</span> on
               April 4th, 2019, Upama's Kitchen & Caterer has become a trusted name in authentic
               Bengali catering services throughout Kolkata.
             </p>

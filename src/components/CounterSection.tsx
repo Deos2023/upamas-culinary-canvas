@@ -70,7 +70,7 @@ const CounterSection = () => {
     },
     {
       icon: Utensils,
-      value: 10000,
+      value: 1000000,
       suffix: '+',
       label: 'Rotis Served',
       color: 'text-secondary',
@@ -103,7 +103,7 @@ const CounterSection = () => {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="text-center p-8 bg-card rounded-xl shadow-lg hover:shadow-xl transition-shadow"
+              className="text-center p-4 bg-card rounded-xl shadow-lg hover:shadow-xl transition-shadow"
             >
               <motion.div
                 whileHover={{ rotate: 360, scale: 1.1 }}

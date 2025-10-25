@@ -127,7 +127,7 @@ const Navbar = () => {
                   className={`block py-2 text-base font-medium transition-colors ${
                     isActive(link.href)
                       ? "text-primary"
-                      : "text-foreground hover:text-primary"
+                      : "text-gray-400 hover:text-primary"
                   }`}
                 >
                   {link.label}

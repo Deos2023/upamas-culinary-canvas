@@ -20,7 +20,7 @@ const TestimonialsSection = () => {
       name: 'Anita Das',
       event: 'Birthday Party',
       rating: 5,
-      text: 'The rotis and luchis were so fresh and tasty! Everyone at my daughter\'s birthday party loved the food. Upama Banerjee personally ensured everything was perfect.',
+      text: 'The rotis and luchis were so fresh and tasty! Everyone at my daughter\'s birthday party loved the food. Upama Mukherjee personally ensured everything was perfect.',
     },
     {
       name: 'Amit Ghosh',

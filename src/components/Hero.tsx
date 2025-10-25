@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
-import { ChevronDown } from 'lucide-react';
+import { ChevronDown, Award } from 'lucide-react';
 import heroImage from '@/assets/hero-catering.jpg';
 
 const Hero = () => {
@@ -24,14 +24,28 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
         >
-          {/* <motion.p
+          {/* Achievement Badges */}
+          <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3, duration: 0.8 }}
-            className="text-primary text-lg md:text-xl  font-medium tracking-wider"
+            className="flex flex-col items-center gap-3 mb-6"
           >
-            ✦ SINCE 2019 ✦
-          </motion.p> */}
+            <div className="flex flex-wrap justify-center gap-3">
+              <div className="flex items-center gap-2 bg-primary/20 backdrop-blur-sm border border-primary/30 rounded-full px-4 py-2">
+                <Award size={16} className="text-primary" />
+                <span className="text-sm font-medium text-primary">
+                  Zee Bangla Rannaghorer Rani 2020
+                </span>
+              </div>
+              <div className="flex items-center gap-2 bg-primary/20 backdrop-blur-sm border border-primary/30 rounded-full px-4 py-2">
+                <Award size={16} className="text-primary" />
+                <span className="text-sm font-medium text-primary">
+                  Zee Bangla Didi No.1 Winner 2025
+                </span>
+              </div>
+            </div>
+          </motion.div>
 
           <motion.h1
             initial={{ opacity: 0, scale: 0.9 }}

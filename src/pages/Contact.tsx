@@ -1,29 +1,33 @@
-import { useState } from 'react';
-import { motion } from 'framer-motion';
-import { MapPin, Mail, Phone, Clock, Loader2 } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { useToast } from '@/hooks/use-toast';
-import { Card, CardContent } from '@/components/ui/card';
+import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
+import { MapPin, Mail, Phone, Clock, Loader2 } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { useToast } from "@/hooks/use-toast";
+import { Card, CardContent } from "@/components/ui/card";
 
 const Contact = () => {
   const { toast } = useToast();
+  useEffect(() => {
+    // Scroll to top when component mounts
+    window.scrollTo(0, 0);
+  }, []);
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    message: '',
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     // Basic validation
     if (!formData.name.trim() || !formData.phone.trim()) {
       toast({
-        title: 'Missing Information',
+        title: "Missing Information",
         description: "Please fill in at least your name and phone number.",
         variant: "destructive",
       });
@@ -38,37 +42,37 @@ const Contact = () => {
 🎯 *New Website Inquiry - Upama's Kitchen*
 
 👤 *Name:* ${formData.name}
-📧 *Email:* ${formData.email || 'Not provided'}
+📧 *Email:* ${formData.email || "Not provided"}
 📞 *Phone:* ${formData.phone}
-💬 *Message:* ${formData.message || 'No additional message'}
+💬 *Message:* ${formData.message || "No additional message"}
 
 *Submitted via Website Contact Form*
       `.trim();
 
       // Encode the message for URL
       const encodedMessage = encodeURIComponent(whatsappMessage);
-      
+
       // Create WhatsApp URL
       const whatsappUrl = `https://wa.me/918240594541?text=${encodedMessage}`;
-      
+
       // Small delay for better UX
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      
+      await new Promise((resolve) => setTimeout(resolve, 1000));
+
       // Open WhatsApp in new tab
-      window.open(whatsappUrl, '_blank');
-      
+      window.open(whatsappUrl, "_blank");
+
       // Show success toast
       toast({
-        title: 'Message Ready!',
-        description: "You're being redirected to WhatsApp to send your inquiry.",
+        title: "Message Ready!",
+        description:
+          "You're being redirected to WhatsApp to send your inquiry.",
       });
-      
+
       // Reset form
-      setFormData({ name: '', email: '', phone: '', message: '' });
-      
+      setFormData({ name: "", email: "", phone: "", message: "" });
     } catch (error) {
       toast({
-        title: 'Error',
+        title: "Error",
         description: "Failed to prepare WhatsApp message. Please try again.",
         variant: "destructive",
       });
@@ -77,7 +81,9 @@ const Contact = () => {
     }
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
@@ -116,10 +122,16 @@ const Contact = () => {
                     <Phone className="text-primary" size={24} />
                   </div>
                   <h3 className="font-semibold mb-2">Phone</h3>
-                  <a href="tel:+918240594541" className="text-sm text-primary hover:underline block">
+                  <a
+                    href="tel:+918240594541"
+                    className="text-sm text-primary hover:underline block"
+                  >
                     8240594541
                   </a>
-                  <a href="tel:+919007294740" className="text-sm text-primary hover:underline block">
+                  <a
+                    href="tel:+919007294740"
+                    className="text-sm text-primary hover:underline block"
+                  >
                     9007294740
                   </a>
                 </CardContent>
@@ -198,7 +210,10 @@ const Contact = () => {
               <h2 className="text-3xl font-bold mb-6">Send Us a Message</h2>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium mb-2">
+                  <label
+                    htmlFor="name"
+                    className="block text-sm font-medium mb-2"
+                  >
                     Name *
                   </label>
                   <Input
@@ -213,7 +228,10 @@ const Contact = () => {
                 </div>
 
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium mb-2">
+                  <label
+                    htmlFor="email"
+                    className="block text-sm font-medium mb-2"
+                  >
                     Email
                   </label>
                   <Input
@@ -227,7 +245,10 @@ const Contact = () => {
                 </div>
 
                 <div>
-                  <label htmlFor="phone" className="block text-sm font-medium mb-2">
+                  <label
+                    htmlFor="phone"
+                    className="block text-sm font-medium mb-2"
+                  >
                     Phone *
                   </label>
                   <Input
@@ -242,7 +263,10 @@ const Contact = () => {
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium mb-2">
+                  <label
+                    htmlFor="message"
+                    className="block text-sm font-medium mb-2"
+                  >
                     Message
                   </label>
                   <Textarea
@@ -255,9 +279,9 @@ const Contact = () => {
                   />
                 </div>
 
-                <Button 
-                  type="submit" 
-                  size="lg" 
+                <Button
+                  type="submit"
+                  size="lg"
                   className="w-full bg-primary hover:bg-primary/90"
                   disabled={isSubmitting}
                 >
@@ -267,7 +291,7 @@ const Contact = () => {
                       Preparing WhatsApp...
                     </>
                   ) : (
-                    'Send via WhatsApp'
+                    "Send via WhatsApp"
                   )}
                 </Button>
               </form>

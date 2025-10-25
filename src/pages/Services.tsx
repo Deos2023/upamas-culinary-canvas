@@ -12,7 +12,11 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import servicebg from "@/assets/grp1.jpeg";
+import { useEffect } from "react";
 const Services = () => {
+  useEffect(()=>{
+    window.scrollTo(0,0);
+  },[])
   const services = [
     {
       icon: Heart,

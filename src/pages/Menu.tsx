@@ -4,18 +4,29 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import menuBackground from "@/assets/food.jpeg";
+import rotiImage from "@/assets/images/roti.jpg";
+import daal from "@/assets/images/daalPoori.jpg";
+import hing from "@/assets/images/hing.jpg";
+import luchi from "@/assets/images/luchi.jpg";
+import paratha from "@/assets/images/paratha.jpg";
+import peas from "@/assets/images/peas.jpg";
+import radhaballavi from "@/assets/images/radhaBallavi.jpg";
+import roll from "@/assets/images/roll.jpg";
+
 const Menu = () => {
   const [filter, setFilter] = useState("All");
-  useEffect(()=>{
-    window.scrollTo(0,0);
-  },[])
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const menuItems = [
     {
       name: "Roti",
       price: "₹2.50/pc",
-      description: "Fresh handmade rotis",
+      quantity: "100pc & onwards",
+      description: "Fresh handmade rotis(100 pc & onwards)",
       category: "Retail",
       type: "Veg",
+      img: rotiImage,
     },
     {
       name: "Luchi",
@@ -23,13 +34,15 @@ const Menu = () => {
       description: "50 pc packet",
       category: "Wholesale",
       type: "Veg",
+      img: luchi,
     },
     {
       name: "Hing Kachori",
       price: "₹4/pc",
-      description: "24 pc packet",
+      description: "25 pc packet",
       category: "Popular",
       type: "Veg",
+      img: hing,
     },
     {
       name: "Peas Kachori",
@@ -37,6 +50,7 @@ const Menu = () => {
       description: "25 pc packet",
       category: "Popular",
       type: "Veg",
+      img: peas,
     },
     {
       name: "Dal Poori",
@@ -44,6 +58,7 @@ const Menu = () => {
       description: "25 pc packet",
       category: "Retail",
       type: "Veg",
+      img: daal,
     },
     {
       name: "Radha Ballavi",
@@ -51,6 +66,7 @@ const Menu = () => {
       description: "25 pc packet",
       category: "Popular",
       type: "Veg",
+      img: radhaballavi,
     },
     {
       name: "Plain Paratha",
@@ -58,13 +74,15 @@ const Menu = () => {
       description: "25 pc packet",
       category: "Retail",
       type: "Veg",
+      img: paratha,
     },
     {
-      name: "Egg Roll Base",
+      name: "Roll Base",
       price: "₹8/pc",
       description: "25 pc packet",
       category: "Retail",
       type: "Non-Veg",
+      img: roll,
     },
   ];
 
@@ -137,7 +155,14 @@ const Menu = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
               >
-                <Card className="hover:shadow-lg transition-shadow hover-scale h-full">
+                <Card className="hover:shadow-lg transition-shadow hover-scale h-full overflow-hidden">
+                  <div className="h-48 overflow-hidden">
+                    <img 
+                      src={item.img} 
+                      alt={item.name}
+                      className="w-full h-full object-cover transition-transform hover:scale-105"
+                    />
+                  </div>
                   <CardContent className="p-6">
                     <div className="flex justify-between items-start mb-3">
                       <h3 className="text-xl font-bold">{item.name}</h3>

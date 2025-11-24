@@ -1,8 +1,8 @@
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { Button } from '@/components/ui/button';
-import { ChevronDown, Award } from 'lucide-react';
-import heroImage from '@/assets/hero-catering.jpg';
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
+import { ChevronDown, Award } from "lucide-react";
+import heroImage from "@/assets/hero-catering.jpg";
 
 const Hero = () => {
   return (
@@ -44,6 +44,12 @@ const Hero = () => {
                   Zee Bangla Didi No.1 Winner 2025
                 </span>
               </div>
+              <div className="flex items-center gap-2 bg-primary/20 backdrop-blur-sm border border-primary/30 rounded-full px-4 py-2">
+                <Award size={16} className="text-primary" />
+                <span className="text-sm font-medium text-primary">
+                  News 18 Bangla Leadership Conclave Award winner -2025
+                </span>
+              </div>
             </div>
           </motion.div>
 
@@ -72,8 +78,7 @@ const Hero = () => {
             transition={{ delay: 1, duration: 0.8 }}
             className="text-base md:text-lg mb-12 max-w-2xl mx-auto text-gray-200"
           >
-            Premium Bengali catering services and automatic roti making machine dealer
-            serving Kolkata with excellence
+            We offer premium, delicious Bengali food catering services and wholesale 'Ready to Fry' items (Roti, Luchi, Kachori, Paratha, Roll Base). We are also a trusted dealer of roti making machines in India
           </motion.p>
 
           <motion.div

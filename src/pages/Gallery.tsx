@@ -14,6 +14,7 @@ import image5 from '@/assets/9.jpeg';
 import image6 from '@/assets/10.jpeg';
 import image8 from '@/assets/award (1).jpeg';
 import image9 from '@/assets/rannaghor (2).jpeg';
+import chart from "@/assets/images/chart.jpeg";
 
 import video1 from "@/assets/videos/1.mp4";
 import video2 from "@/assets/videos/2.mp4";
@@ -212,6 +213,7 @@ const Gallery = () => {
     { type: 'image', src: image6, title: 'Catering Service', category: 'Events' },
     { type: 'image', src: image8, title: 'Leadership Conclave Winner', category: 'Awards' },
     { type: 'image', src: image9, title: 'Ranna Ghorer rani', category: 'Awards' },
+    { type: 'image', src: chart, title: 'Business Chart', category: 'Business' },
 
     // Videos
     { type: 'video', src: video1, title: 'Life Story of Upama', category: 'Documentary' },

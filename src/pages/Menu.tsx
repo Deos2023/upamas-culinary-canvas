@@ -12,6 +12,7 @@ import paratha from "@/assets/images/paratha.jpg";
 import peas from "@/assets/images/peas.jpg";
 import radhaballavi from "@/assets/images/radhaBallavi.jpg";
 import roll from "@/assets/images/roll.jpg";
+import chart from "@/assets/images/chart.jpeg";
 
 const Menu = () => {
   const [filter, setFilter] = useState("All");
@@ -198,7 +199,14 @@ const Menu = () => {
           )}
         </div>
       </section>
-
+      {/* chart */}
+      <div className="py-10 bg-muted/30">
+        <div className="container mx-auto px-4 ">
+          <div className="mx-auto max-w-5xl">
+            <img src={chart} alt="Business Chart" className="w-full h-100 rounded-lg shadow-lg" />
+          </div>
+        </div>
+      </div>
       {/* CTA */}
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4 text-center">

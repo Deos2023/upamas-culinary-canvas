@@ -39,7 +39,7 @@ const Menu = () => {
     },
     {
       name: "Hing Kachori",
-      price: "₹4/pc",
+      price: "₹5/pc",
       description: "25 pc packet",
       category: "Popular",
       type: "Veg",
@@ -47,7 +47,7 @@ const Menu = () => {
     },
     {
       name: "Peas Kachori",
-      price: "₹4/pc",
+      price: "₹5/pc",
       description: "25 pc packet",
       category: "Popular",
       type: "Veg",
@@ -55,7 +55,7 @@ const Menu = () => {
     },
     {
       name: "Dal Poori",
-      price: "₹4/pc",
+      price: "₹5/pc",
       description: "25 pc packet",
       category: "Retail",
       type: "Veg",
@@ -63,7 +63,7 @@ const Menu = () => {
     },
     {
       name: "Radha Ballavi",
-      price: "₹4/pc",
+      price: "₹5/pc",
       description: "25 pc packet",
       category: "Popular",
       type: "Veg",

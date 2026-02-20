@@ -17,8 +17,8 @@ import roll from "@/assets/images/roll.jpg";
 const FeaturedMenu = () => {
   const menuItems = [
     {
-      name: "Roti",
-      price: "₹2.50/pc",
+      name: "Frozen Roti",
+      price: "₹3/pc",
       quantity: "100pc & onwards",
       description: "Fresh handmade rotis(100 pc & onwards)",
       category: "Retail",
@@ -37,7 +37,7 @@ const FeaturedMenu = () => {
     },
     {
       name: "Hing Kachori",
-      price: "₹4/pc",
+      price: "₹5/pc",
       description: "25 pc packet - Crispy & flavorful",
       category: "Popular",
       type: "Veg",
@@ -46,7 +46,7 @@ const FeaturedMenu = () => {
     },
     {
       name: "Peas Kachori",
-      price: "₹4/pc",
+      price: "₹5/pc",
       description: "25 pc packet - Stuffed with spiced peas",
       category: "Popular",
       type: "Veg",
@@ -55,7 +55,7 @@ const FeaturedMenu = () => {
     },
     {
       name: "Dal Poori",
-      price: "₹4/pc",
+      price: "₹5/pc",
       description: "25 pc packet - Lentil stuffed goodness",
       category: "Retail",
       type: "Veg",
@@ -64,7 +64,7 @@ const FeaturedMenu = () => {
     },
     {
       name: "Radha Ballavi",
-      price: "₹4/pc",
+      price: "₹5/pc",
       description: "25 pc packet - Traditional Bengali delight",
       category: "Popular",
       type: "Veg",

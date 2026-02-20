@@ -47,7 +47,7 @@ const Navbar = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3">
             <motion.div whileHover={{ scale: 1.05 }} className="relative group">
-              <div className="w-12 h-12 rounded-full ring-2 ring-yellow-400/60 ring-offset-2 ring-offset-dark group-hover:ring-yellow-400 transition-all duration-300">
+              <div className="w-16 h-16 rounded-full ring-2 ring-yellow-400/60 ring-offset-2 ring-offset-dark group-hover:ring-yellow-400 transition-all duration-300">
                 <img
                   src={logoImage}
                   alt="Upama's Kitchen Logo"
